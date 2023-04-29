@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_c8_str/sura_details.dart';
 
@@ -133,7 +134,7 @@ class QuranTab extends StatelessWidget {
             color: Theme.of(context).primaryColor,
           ),
           Text(
-            "Sura Name",
+            AppLocalizations.of(context)!.suraNames,
             style: GoogleFonts.elMessiri(
                 fontWeight: FontWeight.w600,
                 fontSize: 25,
