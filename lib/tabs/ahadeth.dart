@@ -75,7 +75,6 @@ class _AhadethTabState extends State<AhadethTab> {
     //   print(error);
     // }
 
-    String doc = "    Abdu llah   ";
     print(doc.trim()); //>> "Abdu llah"
     rootBundle.loadString("assets/files/ahadeth.txt").then((value) {
       List<String> AhadethContent = value.split("#");
