@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_c8_str/hadeth_details.dart';
 import 'package:islami_c8_str/home.dart';
 import 'package:islami_c8_str/my_theme.dart';
 import 'package:islami_c8_str/sura_details.dart';
@@ -18,6 +19,7 @@ class MyApplication extends StatelessWidget {
       routes: {
         HomeScreen.routeName: (content) => HomeScreen(),
         SuraDetails.routeName: (content) => SuraDetails(),
+        HadethDetails.routeName: (content) => HadethDetails(),
       },
     );
   }
