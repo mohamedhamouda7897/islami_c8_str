@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_c8_str/hadeth_details.dart';
 import 'package:islami_c8_str/hadeth_model.dart';
@@ -26,7 +27,7 @@ class _AhadethTabState extends State<AhadethTab> {
           color: Theme.of(context).primaryColor,
         ),
         Text(
-          "Ahadeth",
+          AppLocalizations.of(context)!.ahadeth,
           style: GoogleFonts.elMessiri(
               fontWeight: FontWeight.w600,
               fontSize: 25,
@@ -75,7 +76,6 @@ class _AhadethTabState extends State<AhadethTab> {
     //   print(error);
     // }
 
-    print(doc.trim()); //>> "Abdu llah"
     rootBundle.loadString("assets/files/ahadeth.txt").then((value) {
       List<String> AhadethContent = value.split("#");
       for (int i = 0; i < AhadethContent.length; i++) {
