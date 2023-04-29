@@ -29,13 +29,13 @@ class ShowLanguageSheet extends StatelessWidget {
                       fontWeight: FontWeight.w200),
                 ),
                 Spacer(),
-                Icon(
-                  Icons.done,
-                  color: provider.languageCode == "en"
-                      ? Theme.of(context).primaryColor
-                      : Colors.black54,
-                  size: 30,
-                )
+                provider.languageCode == "en"
+                    ? Icon(
+                        Icons.done,
+                        color: Theme.of(context).primaryColor,
+                        size: 30,
+                      )
+                    : SizedBox.shrink()
               ],
             ),
           ),
@@ -54,13 +54,13 @@ class ShowLanguageSheet extends StatelessWidget {
                         fontSize: 28,
                         fontWeight: FontWeight.w200)),
                 Spacer(),
-                Icon(
-                  Icons.done,
-                  color: provider.languageCode != "en"
-                      ? Theme.of(context).primaryColor
-                      : Colors.black54,
-                  size: 30,
-                ),
+                provider.languageCode != "en"
+                    ? Icon(
+                        Icons.done,
+                        color: Theme.of(context).primaryColor,
+                        size: 30,
+                      )
+                    : SizedBox.shrink()
               ],
             ),
           ),
