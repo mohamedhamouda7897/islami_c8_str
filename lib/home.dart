@@ -30,7 +30,9 @@ class _HomeScreenState extends State<HomeScreen> {
         SizedBox(
             width: double.infinity,
             child: Image.asset(
-              "assets/images/main_bg.png",
+              Theme.of(context).colorScheme.brightness == Brightness.light
+                  ? "assets/images/main_bg.png"
+                  : "assets/images/dark_main_bg.png",
               fit: BoxFit.fill,
             )),
         Scaffold(

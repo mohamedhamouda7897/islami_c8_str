@@ -9,8 +9,11 @@ import 'package:islami_c8_str/sura_details.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-      create: (context) => MyProvider(), child: MyApplication()));
+  runApp(MultiProvider(providers: [
+    ChangeNotifierProvider(
+      create: (context) => MyProvider(),
+    ),
+  ], child: MyApplication()));
 }
 
 class MyApplication extends StatelessWidget {
@@ -31,6 +34,7 @@ class MyApplication extends StatelessWidget {
       ],
       locale: Locale(provider.languageCode),
       darkTheme: MyThemeData.darkTheme,
+      themeMode: provider.themeMode,
       debugShowCheckedModeBanner: false,
       initialRoute: HomeScreen.routeName,
       routes: {

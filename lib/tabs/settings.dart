@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_c8_str/providers/my_provider.dart';
 import 'package:islami_c8_str/showLanguagesheet.dart';
+import 'package:islami_c8_str/show_theme_bottom_sheet.dart';
 import 'package:provider/provider.dart';
 
 class SettingsTab extends StatefulWidget {
@@ -47,20 +48,34 @@ class _SettingsTabState extends State<SettingsTab> {
           SizedBox(
             height: 5,
           ),
-          Container(
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18),
-                  border: Border.all(color: Theme.of(context).primaryColor)),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  "Light",
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-              )),
+          InkWell(
+            onTap: () {
+              showThemeSheet();
+            },
+            child: Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    border: Border.all(color: Theme.of(context).primaryColor)),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    pro.themeMode == ThemeMode.light ? "Light" : "Dark",
+                    style: Theme.of(context).textTheme.bodyLarge,
+                  ),
+                )),
+          ),
         ],
       ),
+    );
+  }
+
+  void showThemeSheet() {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return ShowThemeBottomSheet();
+      },
     );
   }
 

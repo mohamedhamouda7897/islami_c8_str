@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_c8_str/sura_details.dart';
 
 import '../args_model.dart';
@@ -131,18 +130,20 @@ class QuranTab extends StatelessWidget {
           Image.asset("assets/images/quran_bg.png"),
           Divider(
             thickness: 2,
-            color: Theme.of(context).primaryColor,
+            color: Theme.of(context).colorScheme.brightness == Brightness.light
+                ? Theme.of(context).primaryColor
+                : Theme.of(context).colorScheme.onSecondary,
           ),
           Text(
             AppLocalizations.of(context)!.suraNames,
-            style: GoogleFonts.elMessiri(
-                fontWeight: FontWeight.w600,
-                fontSize: 25,
-                color: Theme.of(context).secondaryHeaderColor),
+            style:
+                Theme.of(context).textTheme.bodySmall!.copyWith(fontSize: 26),
           ),
           Divider(
             thickness: 2,
-            color: Theme.of(context).primaryColor,
+            color: Theme.of(context).colorScheme.brightness == Brightness.light
+                ? Theme.of(context).primaryColor
+                : Theme.of(context).colorScheme.onSecondary,
           ),
           Expanded(
             child: ListView.separated(
@@ -160,11 +161,8 @@ class QuranTab extends StatelessWidget {
                   },
                   child: Center(
                       child: Text(
-                    suraName[index],
-                    style: GoogleFonts.elMessiri(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w400,
-                        color: Theme.of(context).secondaryHeaderColor),
+                        suraName[index],
+                    style: Theme.of(context).textTheme.bodySmall,
                   )),
                 );
               },

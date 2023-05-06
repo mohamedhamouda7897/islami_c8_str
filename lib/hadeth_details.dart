@@ -11,7 +11,9 @@ class HadethDetails extends StatelessWidget {
       SizedBox(
           width: double.infinity,
           child: Image.asset(
-            "assets/images/main_bg.png",
+            Theme.of(context).colorScheme.brightness == Brightness.light
+                ? "assets/images/main_bg.png"
+                : "assets/images/dark_main_bg.png",
             fit: BoxFit.fill,
           )),
       Scaffold(
@@ -23,6 +25,7 @@ class HadethDetails extends StatelessWidget {
         ),
         body: SingleChildScrollView(
           child: Card(
+            color: Theme.of(context).colorScheme.surface,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(18),
                 side: BorderSide(color: Theme.of(context).primaryColor)),
