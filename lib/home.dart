@@ -3,6 +3,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_c8_str/tabs/ahadeth.dart';
 import 'package:islami_c8_str/tabs/quran.dart';
 import 'package:islami_c8_str/tabs/radio.dart';
+
+import 'package:islami_c8_str/tabs/tasbeh/sebha.dart';
 import 'package:islami_c8_str/tabs/sebha.dart';
 import 'package:islami_c8_str/tabs/settings.dart';
 
