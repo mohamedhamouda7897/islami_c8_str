@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islami_c8_str/tabs/ahadeth.dart';
 import 'package:islami_c8_str/tabs/quran.dart';
 import 'package:islami_c8_str/tabs/radio.dart';
-import 'package:islami_c8_str/tabs/sebha.dart';
+import 'package:islami_c8_str/tabs/tasbeh/sebha.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = "home";
