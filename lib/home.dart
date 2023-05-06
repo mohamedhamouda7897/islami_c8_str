@@ -17,10 +17,10 @@ class _HomeScreenState extends State<HomeScreen> {
   int index = 0;
   List<Widget> tabs = [
     QuranTab(),
-    SebhaTab(),
+    const SebhaTab(),
     AhadethTab(),
-    RadioTab(),
-    SettingsTab()
+    const RadioTab(),
+    const SettingsTab()
   ];
 
   @override
@@ -50,23 +50,23 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             items: [
               BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage("assets/images/quran.png")),
+                  icon: const ImageIcon(AssetImage("assets/images/quran.png")),
                   label: AppLocalizations.of(context)!.quran,
                   backgroundColor: Theme.of(context).primaryColor),
               BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage("assets/images/sebha.png")),
+                  icon: const ImageIcon(AssetImage("assets/images/sebha.png")),
                   label: AppLocalizations.of(context)!.sebha,
                   backgroundColor: Theme.of(context).primaryColor),
               BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage("assets/images/ahadeth.png")),
+                  icon: const ImageIcon(AssetImage("assets/images/ahadeth.png")),
                   label: AppLocalizations.of(context)!.ahadeth,
                   backgroundColor: Theme.of(context).primaryColor),
               BottomNavigationBarItem(
-                  icon: ImageIcon(AssetImage("assets/images/radio.png")),
+                  icon: const ImageIcon(AssetImage("assets/images/radio.png")),
                   label: AppLocalizations.of(context)!.radio,
                   backgroundColor: Theme.of(context).primaryColor),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.settings),
+                  icon: const Icon(Icons.settings),
                   label: "Settings",
                   backgroundColor: Theme.of(context).primaryColor),
             ],
